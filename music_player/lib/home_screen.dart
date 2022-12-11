@@ -11,24 +11,24 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
 
   AudioPlayer audioPlayer = AudioPlayer();
-  PlayerState audioPlayerState = PlayerState.paused;
+  // PlayerState audioPlayerState = PlayerState.paused;
 
   var image = 'https://w0.peakpx.com/wallpaper/123/984/HD-wallpaper-hanuman-god-jai-shri-ram-lord-hanuman-ram-janki-ram-siya-ram-thumbnail.jpg';
-  var music = '/Hanuman Chalisa.mp3';
+  var music = 'HanumanChalisa.mp3';
 
   bool isPlaying = false;
   bool audioPlayed = false;
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    audioPlayer.onPlayerStateChanged.listen((PlayerState p) {
-      setState(() {
-        audioPlayerState = p;
-      });
-     });
-  }
+  // @override
+  // void initState() {
+  //   // TODO: implement initState
+  //   super.initState();
+  //   audioPlayer.onPlayerStateChanged.listen((PlayerState p) {
+  //     setState(() {
+  //       audioPlayerState = p;
+  //     });
+  //    });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
+                    children: const[
                       Icon(Icons.segment_outlined,
                       color: Colors.white,),
                       Text('Music Wings',
