@@ -19,16 +19,6 @@ class _HomeScreenState extends State<HomeScreen> {
   bool isPlaying = false;
   bool audioPlayed = false;
 
-  // @override
-  // void initState() {
-  //   // TODO: implement initState
-  //   super.initState();
-  //   audioPlayer.onPlayerStateChanged.listen((PlayerState p) {
-  //     setState(() {
-  //       audioPlayerState = p;
-  //     });
-  //    });
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -113,6 +103,31 @@ class _HomeScreenState extends State<HomeScreen> {
           },
           child: Icon(isPlaying? Icons.pause : Icons.play_arrow),
           backgroundColor: Color.fromARGB(255, 248, 75, 75),
+          
+        ),
+        
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        bottomNavigationBar: BottomAppBar(
+          color: Color.fromARGB(255, 244, 47, 47),
+          shape: CircularNotchedRectangle(),
+          notchMargin: 10,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+             Container(
+              margin: EdgeInsets.only(left: 15),
+              child: Icon(Icons.keyboard_double_arrow_left_sharp,
+              size: 30,
+              color: Colors.white,),
+             ),
+             Container(
+              margin: EdgeInsets.only(right: 15),
+              child: Icon(Icons.keyboard_double_arrow_right_sharp,
+              size: 30,
+              color: Colors.white,),
+             ),
+            ],
+          ),
         ),
       ),
     );
